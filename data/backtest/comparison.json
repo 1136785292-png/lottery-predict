@@ -1,0 +1,38 @@
+{
+  "random": {
+    "strategy": "random",
+    "total_periods": 250,
+    "win_count": 154,
+    "win_rate": 0.616,
+    "total_pnl": 401.52,
+    "roi_pct": 1.61,
+    "max_drawdown": 1322.22,
+    "bet_per_period": 100.0,
+    "start_date": "2021-08-14 00:00:00",
+    "end_date": "2025-05-25 00:00:00"
+  },
+  "odds_only": {
+    "strategy": "odds_only",
+    "total_periods": 250,
+    "win_count": 156,
+    "win_rate": 0.624,
+    "total_pnl": -754.87,
+    "roi_pct": -3.02,
+    "max_drawdown": 2034.14,
+    "bet_per_period": 100.0,
+    "start_date": "2021-08-14 00:00:00",
+    "end_date": "2025-05-25 00:00:00"
+  },
+  "dual_track": {
+    "strategy": "dual_track",
+    "total_periods": 250,
+    "win_count": 171,
+    "win_rate": 0.684,
+    "total_pnl": 2299.26,
+    "roi_pct": 9.2,
+    "max_drawdown": 507.4,
+    "bet_per_period": 100.0,
+    "start_date": "2021-08-14 00:00:00",
+    "end_date": "2025-05-25 00:00:00"
+  }
+}

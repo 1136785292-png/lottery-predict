@@ -1,0 +1,251 @@
+date,m1,m1_odds,m1_win,m2,m2_odds,m2_win,combined_odds,both_win,pnl,bankroll
+2021-08-14 00:00:00,Paris SG vs Strasbourg,1.2,True,Chelsea vs Crystal Palace,1.25,True,1.5,True,50.0,50.0
+2021-08-21 00:00:00,Man City vs Norwich,1.08,True,Liverpool vs Burnley,1.18,True,1.274,True,27.44,77.44
+2021-08-22 00:00:00,Bayern Munich vs FC Koln,1.11,True,Napoli vs Venezia,1.22,True,1.354,True,35.42,112.86
+2021-08-28 00:00:00,Bayern Munich vs Hertha,1.14,True,Juventus vs Empoli,1.22,False,1.391,False,-100.0,12.86
+2021-08-29 00:00:00,Tottenham vs Watford,1.36,True,Barcelona vs Getafe,1.4,True,1.904,True,90.4,103.26
+2021-09-11 00:00:00,Man United vs Newcastle,1.18,True,Paris SG vs Clermont,1.25,True,1.475,True,47.5,150.76
+2021-09-18 00:00:00,Bayern Munich vs Bochum,1.06,True,Man City vs Southampton,1.12,False,1.187,False,-100.0,50.76
+2021-09-19 00:00:00,Paris SG vs Lyon,1.3,True,Dortmund vs Union Berlin,1.36,True,1.768,True,76.8,127.56
+2021-09-22 00:00:00,Real Madrid vs Mallorca,1.22,True,Milan vs Venezia,1.25,True,1.525,True,52.5,180.06
+2021-09-25 00:00:00,Paris SG vs Montpellier,1.18,True,RB Leipzig vs Hertha,1.3,True,1.534,True,53.4,233.46
+2021-09-26 00:00:00,Napoli vs Cagliari,1.25,True,Juventus vs Sampdoria,1.3,True,1.625,True,62.5,295.96
+2021-10-02 00:00:00,RB Leipzig vs Bochum,1.2,True,Dortmund vs Augsburg,1.22,True,1.464,True,46.4,342.36
+2021-10-03 00:00:00,Bayern Munich vs Ein Frankfurt,1.16,False,Monaco vs Bordeaux,1.36,True,1.578,False,-100.0,242.36
+2021-10-16 00:00:00,Man City vs Burnley,1.12,True,Sociedad vs Mallorca,1.4,True,1.568,True,56.8,299.16
+2021-10-23 00:00:00,RB Leipzig vs Greuther Furth,1.12,True,Bayern Munich vs Hoffenheim,1.14,True,1.277,True,27.68,326.84
+2021-10-30 00:00:00,Man City vs Crystal Palace,1.14,False,Liverpool vs Brighton,1.22,False,1.391,False,-100.0,226.84
+2021-10-31 00:00:00,M'gladbach vs Bochum,1.36,True,Inter vs Udinese,1.36,True,1.85,True,84.96,311.8
+2021-11-06 00:00:00,Bayern Munich vs Freiburg,1.16,True,Chelsea vs Burnley,1.25,False,1.45,False,-100.0,211.8
+2021-11-07 00:00:00,Lazio vs Salernitana,1.3,True,Arsenal vs Watford,1.36,True,1.768,True,76.8,288.6
+2021-11-20 00:00:00,Paris SG vs Nantes,1.22,True,Atalanta vs Spezia,1.25,True,1.525,True,52.5,341.1
+2021-11-27 00:00:00,Bayern Munich vs Bielefeld,1.07,True,Liverpool vs Southampton,1.28,True,1.37,True,36.96,378.06
+2021-12-04 00:00:00,Milan vs Salernitana,1.18,True,Leverkusen vs Greuther Furth,1.22,True,1.44,True,43.96,422.02
+2021-12-05 00:00:00,Juventus vs Genoa,1.25,True,Tottenham vs Norwich,1.36,True,1.7,True,70.0,492.02
+2021-12-11 00:00:00,Man City vs Wolves,1.14,True,Liverpool vs Aston Villa,1.2,True,1.368,True,36.8,528.82
+2021-12-12 00:00:00,Inter vs Cagliari,1.16,True,Napoli vs Empoli,1.33,False,1.543,False,-100.0,428.82
+2021-12-16 00:00:00,Liverpool vs Newcastle,1.12,True,Chelsea vs Everton,1.22,False,1.366,False,-100.0,328.82
+2021-12-18 00:00:00,RB Leipzig vs Bielefeld,1.2,False,Barcelona vs Elche,1.3,True,1.56,False,-100.0,228.82
+2021-12-21 00:00:00,Juventus vs Cagliari,1.18,True,Villarreal vs Alaves,1.33,True,1.569,True,56.94,285.76
+2021-12-22 00:00:00,Napoli vs Spezia,1.22,False,Inter vs Torino,1.3,True,1.586,False,-100.0,185.76
+2022-01-09 00:00:00,Verona vs Salernitana,1.36,False,Inter vs Lazio,1.4,True,1.904,False,-100.0,85.76
+2022-01-15 00:00:00,Fulham vs Bristol City,1.22,True,Paris SG vs Brest,1.22,True,1.488,True,48.84,134.6
+2022-01-16 00:00:00,Liverpool vs Brentford,1.3,True,Roma vs Cagliari,1.36,True,1.768,True,76.8,211.4
+2022-01-22 00:00:00,Inter vs Venezia,1.1,True,West Brom vs Peterboro,1.36,True,1.496,True,49.6,261.0
+2022-01-23 00:00:00,Napoli vs Salernitana,1.14,True,Real Madrid vs Elche,1.16,False,1.322,False,-100.0,161.0
+2022-02-05 00:00:00,Roma vs Genoa,1.36,False,Bayern Munich vs RB Leipzig,1.4,True,1.904,False,-100.0,61.0
+2022-02-06 00:00:00,Atalanta vs Cagliari,1.25,False,Real Madrid vs Granada,1.25,True,1.562,False,-100.0,-39.0
+2022-02-13 00:00:00,Monaco vs Lorient,1.4,False,Sociedad vs Granada,1.4,True,1.96,False,-100.0,-139.0
+2022-02-19 00:00:00,Liverpool vs Norwich,1.1,True,Real Madrid vs Alaves,1.22,True,1.342,True,34.2,-104.8
+2022-02-20 00:00:00,Bayern Munich vs Greuther Furth,1.07,True,Inter vs Sassuolo,1.28,False,1.37,False,-100.0,-204.8
+2022-02-23 00:00:00,Liverpool vs Leeds,1.16,True,Fulham vs Peterboro,1.18,True,1.369,True,36.88,-167.92
+2022-02-26 00:00:00,Paris SG vs St Etienne,1.14,True,Man United vs Watford,1.3,False,1.482,False,-100.0,-267.92
+2022-03-05 00:00:00,Liverpool vs West Ham,1.28,True,Bayern Munich vs Leverkusen,1.4,False,1.792,False,-100.0,-367.92
+2022-03-06 00:00:00,Juventus vs Spezia,1.22,True,Rennes vs Angers,1.4,True,1.708,True,70.8,-297.12
+2022-03-13 00:00:00,Paris SG vs Bordeaux,1.14,True,Dortmund vs Bielefeld,1.28,True,1.459,True,45.92,-251.2
+2022-03-20 00:00:00,Juventus vs Salernitana,1.2,True,Rennes vs Metz,1.28,True,1.536,True,53.6,-197.6
+2022-04-02 00:00:00,Liverpool vs Watford,1.12,True,Chelsea vs Brentford,1.33,False,1.49,False,-100.0,-297.6
+2022-04-03 00:00:00,Paris SG vs Lorient,1.18,True,Lyon vs Angers,1.4,True,1.652,True,65.2,-232.4
+2022-04-09 00:00:00,Bayern Munich vs Augsburg,1.11,True,Inter vs Verona,1.36,True,1.51,True,50.96,-181.44
+2022-04-10 00:00:00,Roma vs Salernitana,1.28,True,Monaco vs Troyes,1.33,True,1.702,True,70.24,-111.2
+2022-04-16 00:00:00,Man United vs Norwich,1.25,True,Juventus vs Bologna,1.33,False,1.662,False,-100.0,-211.2
+2022-04-17 00:00:00,Hoffenheim vs Greuther Furth,1.28,False,Lyon vs Bordeaux,1.28,True,1.638,False,-100.0,-311.2
+2022-04-20 00:00:00,Man City vs Brighton,1.16,True,Ath Madrid vs Granada,1.3,False,1.508,False,-100.0,-411.2
+2022-04-23 00:00:00,Man City vs Watford,1.1,True,Paris SG vs Lens,1.3,False,1.43,False,-100.0,-511.2
+2022-04-24 00:00:00,Liverpool vs Everton,1.18,True,Barcelona vs Vallecano,1.3,False,1.534,False,-100.0,-611.2
+2022-04-30 00:00:00,Rennes vs St Etienne,1.33,True,Dortmund vs Bochum,1.36,False,1.809,False,-100.0,-711.2
+2022-05-01 00:00:00,Juventus vs Venezia,1.2,True,Barcelona vs Mallorca,1.3,True,1.56,True,56.0,-655.2
+2022-05-02 00:00:00,Atalanta vs Salernitana,1.25,False,Leverkusen vs Ein Frankfurt,1.4,True,1.75,False,-100.0,-755.2
+2022-05-07 00:00:00,Chelsea vs Wolves,1.33,False,West Brom vs Barnsley,1.36,True,1.809,False,-100.0,-855.2
+2022-05-08 00:00:00,Paris SG vs Troyes,1.16,False,Man City vs Newcastle,1.16,True,1.346,False,-100.0,-955.2
+2022-05-14 00:00:00,Monaco vs Brest,1.25,True,Roma vs Venezia,1.25,False,1.562,False,-100.0,-1055.2
+2022-05-21 00:00:00,Paris SG vs Metz,1.2,True,Atalanta vs Empoli,1.22,False,1.464,False,-100.0,-1155.2
+2022-05-22 00:00:00,Inter vs Sampdoria,1.14,True,Liverpool vs Wolves,1.14,True,1.3,True,29.96,-1125.24
+2022-08-13 00:00:00,Man City vs Bournemouth,1.06,True,Paris SG vs Montpellier,1.08,True,1.145,True,14.48,-1110.76
+2022-08-14 00:00:00,Bayern Munich vs Wolfsburg,1.12,True,Fiorentina vs Cremonese,1.36,True,1.523,True,52.32,-1058.44
+2022-08-20 00:00:00,Inter vs Spezia,1.16,True,Dortmund vs Werder Bremen,1.36,False,1.578,False,-100.0,-1158.44
+2022-08-21 00:00:00,Napoli vs Monza,1.33,True,Rennes vs Ajaccio,1.4,True,1.862,True,86.2,-1072.24
+2022-08-27 00:00:00,Liverpool vs Bournemouth,1.1,True,Bayern Munich vs M'gladbach,1.18,False,1.298,False,-100.0,-1172.24
+2022-08-28 00:00:00,Barcelona vs Valladolid,1.14,True,Paris SG vs Monaco,1.18,False,1.345,False,-100.0,-1272.24
+2022-08-30 00:00:00,Inter vs Cremonese,1.14,True,Roma vs Monza,1.3,True,1.482,True,48.2,-1224.04
+2022-08-31 00:00:00,Man City vs Nott'm Forest,1.06,True,Napoli vs Lecce,1.25,False,1.325,False,-100.0,-1324.04
+2022-09-03 00:00:00,Lyon vs Angers,1.28,True,Real Madrid vs Betis,1.4,True,1.792,True,79.2,-1244.84
+2022-09-10 00:00:00,Paris SG vs Brest,1.07,True,Bayern Munich vs Stuttgart,1.14,False,1.22,False,-100.0,-1344.84
+2022-09-11 00:00:00,Real Madrid vs Mallorca,1.25,True,Atalanta vs Cremonese,1.3,False,1.625,False,-100.0,-1444.84
+2022-09-17 00:00:00,Barcelona vs Elche,1.08,True,Dortmund vs Schalke 04,1.36,True,1.469,True,46.88,-1397.96
+2022-09-30 00:00:00,Ath Bilbao vs Almeria,1.33,True,Bayern Munich vs Leverkusen,1.36,True,1.809,True,80.88,-1317.08
+2022-10-01 00:00:00,Paris SG vs Nice,1.16,True,RB Leipzig vs Bochum,1.22,True,1.415,True,41.52,-1275.56
+2022-10-02 00:00:00,Real Madrid vs Osasuna,1.3,False,Man City vs Man United,1.33,True,1.729,False,-100.0,-1375.56
+2022-10-08 00:00:00,Man City vs Southampton,1.11,True,Marseille vs Ajaccio,1.33,False,1.476,False,-100.0,-1475.56
+2022-10-09 00:00:00,Barcelona vs Celta,1.28,True,Roma vs Lecce,1.33,True,1.702,True,70.24,-1405.32
+2022-10-15 00:00:00,RB Leipzig vs Hertha,1.4,True,Valencia vs Elche,1.4,False,1.96,False,-100.0,-1505.32
+2022-10-16 00:00:00,Bayern Munich vs Freiburg,1.25,True,Napoli vs Bologna,1.25,True,1.562,True,56.25,-1449.07
+2022-10-22 00:00:00,Man City vs Brighton,1.2,True,Real Madrid vs Sevilla,1.36,True,1.632,True,63.2,-1385.87
+2022-10-29 00:00:00,Paris SG vs Troyes,1.09,True,Inter vs Sampdoria,1.25,True,1.362,True,36.25,-1349.62
+2022-10-30 00:00:00,Real Madrid vs Girona,1.2,False,Arsenal vs Nott'm Forest,1.2,True,1.44,False,-100.0,-1449.62
+2022-11-05 00:00:00,Barcelona vs Almeria,1.08,True,Man City vs Fulham,1.11,True,1.199,True,19.88,-1429.74
+2022-11-08 00:00:00,Bayern Munich vs Werder Bremen,1.14,True,Napoli vs Empoli,1.25,True,1.425,True,42.5,-1387.24
+2022-11-12 00:00:00,Man City vs Brentford,1.14,False,Liverpool vs Southampton,1.25,True,1.425,False,-100.0,-1487.24
+2022-11-13 00:00:00,Paris SG vs Auxerre,1.11,True,Lille vs Angers,1.33,True,1.476,True,47.63,-1439.61
+2022-12-27 00:00:00,Man United vs Nott'm Forest,1.29,True,Chelsea vs Bournemouth,1.3,True,1.677,True,67.7,-1371.91
+2022-12-31 00:00:00,Man City vs Everton,1.13,False,Barcelona vs Espanol,1.25,False,1.412,False,-100.0,-1471.91
+2023-01-14 00:00:00,Inter vs Verona,1.3,True,Lens vs Auxerre,1.36,True,1.768,True,76.8,-1395.11
+2023-01-15 00:00:00,Atalanta vs Salernitana,1.4,True,Lille vs Troyes,1.4,True,1.96,True,96.0,-1299.11
+2023-01-21 00:00:00,Ein Frankfurt vs Schalke 04,1.36,True,Ath Madrid vs Valladolid,1.4,True,1.904,True,90.4,-1208.71
+2023-01-22 00:00:00,Barcelona vs Getafe,1.18,True,Man City vs Wolves,1.2,True,1.416,True,41.6,-1167.11
+2023-01-28 00:00:00,Atalanta vs Sampdoria,1.33,True,Bayern Munich vs Ein Frankfurt,1.33,False,1.769,False,-100.0,-1267.11
+2023-02-04 00:00:00,Brighton vs Bournemouth,1.33,True,Paris SG vs Toulouse,1.36,True,1.809,True,80.88,-1186.23
+2023-02-12 00:00:00,Napoli vs Cremonese,1.18,True,Man City vs Aston Villa,1.25,True,1.475,True,47.5,-1138.73
+2023-02-19 00:00:00,Barcelona vs Cadiz,1.18,True,Dortmund vs Hertha,1.33,True,1.569,True,56.94,-1081.79
+2023-03-04 00:00:00,Arsenal vs Bournemouth,1.22,True,Paris SG vs Nantes,1.3,True,1.586,True,58.6,-1023.19
+2023-03-11 00:00:00,Bayern Munich vs Augsburg,1.13,True,Real Madrid vs Espanol,1.25,True,1.412,True,41.25,-981.94
+2023-03-12 00:00:00,Juventus vs Sampdoria,1.33,True,Man United vs Southampton,1.36,False,1.809,False,-100.0,-1081.94
+2023-03-19 00:00:00,Arsenal vs Crystal Palace,1.25,True,Sociedad vs Elche,1.4,True,1.75,True,75.0,-1006.94
+2023-04-01 00:00:00,Arsenal vs Leeds,1.29,True,Juventus vs Verona,1.4,True,1.806,True,80.6,-926.34
+2023-04-02 00:00:00,Real Madrid vs Valladolid,1.2,True,Lille vs Lorient,1.36,True,1.632,True,63.2,-863.14
+2023-04-15 00:00:00,Man City vs Leicester,1.14,True,Bayern Munich vs Hoffenheim,1.22,False,1.391,False,-100.0,-963.14
+2023-04-16 00:00:00,Marseille vs Troyes,1.2,True,Ath Madrid vs Almeria,1.22,True,1.464,True,46.4,-916.74
+2023-04-22 00:00:00,Liverpool vs Nott'm Forest,1.17,True,Real Madrid vs Celta,1.36,True,1.591,True,59.12,-857.62
+2023-04-26 00:00:00,Celta vs Elche,1.3,True,Ath Madrid vs Mallorca,1.4,True,1.82,True,82.0,-775.62
+2023-04-29 00:00:00,Real Madrid vs Almeria,1.14,True,Lille vs Ajaccio,1.22,True,1.391,True,39.08,-736.54
+2023-04-30 00:00:00,Bayern Munich vs Hertha,1.11,True,Paris SG vs Lorient,1.18,False,1.31,False,-100.0,-836.54
+2023-05-03 00:00:00,Man City vs West Ham,1.2,True,Liverpool vs Fulham,1.25,True,1.5,True,50.0,-786.54
+2023-05-08 00:00:00,Burnley vs Cardiff,1.33,True,Brighton vs Everton,1.33,False,1.769,False,-100.0,-886.54
+2023-05-13 00:00:00,Paris SG vs Ajaccio,1.1,True,Bayern Munich vs Schalke 04,1.13,True,1.243,True,24.3,-862.24
+2023-05-14 00:00:00,Marseille vs Angers,1.18,True,RB Leipzig vs Werder Bremen,1.25,True,1.475,True,47.5,-814.74
+2023-05-21 00:00:00,Brighton vs Southampton,1.22,True,Man City vs Chelsea,1.25,True,1.525,True,52.5,-762.24
+2023-05-27 00:00:00,Lens vs Ajaccio,1.13,True,Dortmund vs Mainz,1.14,False,1.288,False,-100.0,-862.24
+2023-05-28 00:00:00,Lazio vs Cremonese,1.22,True,Ath Bilbao vs Elche,1.3,False,1.586,False,-100.0,-962.24
+2023-06-03 00:00:00,Paris SG vs Clermont,1.22,False,Nantes vs Angers,1.36,True,1.659,False,-100.0,-1062.24
+2023-08-12 00:00:00,Arsenal vs Nott'm Forest,1.18,True,Brighton vs Luton,1.33,True,1.569,True,56.94,-1005.3
+2023-08-14 00:00:00,Ath Madrid vs Granada,1.3,True,Man United vs Wolves,1.33,True,1.729,True,72.9,-932.4
+2023-08-19 00:00:00,Liverpool vs Bournemouth,1.2,True,Dortmund vs FC Koln,1.4,True,1.68,True,68.0,-864.4
+2023-08-20 00:00:00,Barcelona vs Cadiz,1.2,True,Ein Frankfurt vs Darmstadt,1.36,True,1.632,True,63.2,-801.2
+2023-08-26 00:00:00,Arsenal vs Fulham,1.2,False,Man United vs Nott'm Forest,1.3,True,1.56,False,-100.0,-901.2
+2023-08-27 00:00:00,Bayern Munich vs Augsburg,1.08,True,Napoli vs Sassuolo,1.33,True,1.436,True,43.64,-857.56
+2023-09-02 00:00:00,Man City vs Fulham,1.17,True,Leverkusen vs Darmstadt,1.2,True,1.404,True,40.4,-817.16
+2023-09-16 00:00:00,RB Leipzig vs Augsburg,1.25,True,Tottenham vs Sheffield United,1.29,True,1.612,True,61.25,-755.91
+2023-09-23 00:00:00,Bayern Munich vs Bochum,1.11,True,Man City vs Nott'm Forest,1.14,True,1.265,True,26.54,-729.37
+2023-09-24 00:00:00,Leverkusen vs Heidenheim,1.22,True,Brighton vs Bournemouth,1.36,True,1.659,True,65.92,-663.45
+2023-09-27 00:00:00,Real Madrid vs Las Palmas,1.2,True,Inter vs Sassuolo,1.33,False,1.596,False,-100.0,-763.45
+2023-10-07 00:00:00,RB Leipzig vs Bochum,1.25,False,Real Madrid vs Osasuna,1.29,True,1.612,False,-100.0,-863.45
+2023-10-08 00:00:00,Bayern Munich vs Freiburg,1.14,True,Leverkusen vs FC Koln,1.33,True,1.516,True,51.62,-811.83
+2023-10-21 00:00:00,Paris SG vs Strasbourg,1.22,True,Liverpool vs Everton,1.33,True,1.623,True,62.26,-749.57
+2023-10-28 00:00:00,Bayern Munich vs Darmstadt,1.06,True,Arsenal vs Sheffield United,1.13,True,1.198,True,19.78,-729.79
+2023-10-29 00:00:00,Aston Villa vs Luton,1.25,True,Liverpool vs Nott'm Forest,1.29,True,1.612,True,61.25,-668.54
+2023-11-11 00:00:00,Bayern Munich vs Heidenheim,1.06,True,Arsenal vs Burnley,1.18,True,1.251,True,25.08,-643.46
+2023-11-12 00:00:00,Inter vs Frosinone,1.18,True,Napoli vs Empoli,1.22,False,1.44,False,-100.0,-743.46
+2023-12-02 00:00:00,Real Madrid vs Granada,1.17,True,Arsenal vs Wolves,1.25,True,1.462,True,46.25,-697.21
+2023-12-03 00:00:00,Liverpool vs Fulham,1.25,True,Man City vs Tottenham,1.29,False,1.612,False,-100.0,-797.21
+2023-12-09 00:00:00,Paris SG vs Nantes,1.2,True,Inter vs Udinese,1.29,True,1.548,True,54.8,-742.41
+2023-12-16 00:00:00,Man City vs Crystal Palace,1.18,False,Chelsea vs Sheffield United,1.22,True,1.44,False,-100.0,-842.41
+2023-12-17 00:00:00,Real Madrid vs Villarreal,1.29,True,Liverpool vs Man United,1.3,False,1.677,False,-100.0,-942.41
+2023-12-20 00:00:00,Barcelona vs Almeria,1.14,True,Paris SG vs Metz,1.14,True,1.3,True,29.96,-912.45
+2023-12-23 00:00:00,Leicester vs Rotherham,1.17,True,Inter vs Lecce,1.22,True,1.427,True,42.74,-869.71
+2023-12-30 00:00:00,Man City vs Sheffield United,1.08,True,Aston Villa vs Burnley,1.36,True,1.469,True,46.88,-822.83
+2024-01-01 00:00:00,Leicester vs Huddersfield,1.2,True,Leeds vs Birmingham,1.25,True,1.5,True,50.0,-772.83
+2024-01-13 00:00:00,Napoli vs Salernitana,1.33,True,Southampton vs Sheffield Weds,1.4,True,1.862,True,86.2,-686.63
+2024-01-20 00:00:00,Arsenal vs Crystal Palace,1.3,True,Middlesbrough vs Rotherham,1.3,False,1.69,False,-100.0,-786.63
+2024-01-21 00:00:00,Bayern Munich vs Werder Bremen,1.09,False,Real Madrid vs Almeria,1.13,True,1.232,False,-100.0,-886.63
+2024-01-27 00:00:00,Juventus vs Empoli,1.29,False,Leverkusen vs M'gladbach,1.29,False,1.664,False,-100.0,-986.63
+2024-01-28 00:00:00,Paris SG vs Brest,1.36,False,Dortmund vs Bochum,1.36,True,1.85,False,-100.0,-1086.63
+2024-01-31 00:00:00,Man City vs Burnley,1.08,True,Barcelona vs Osasuna,1.33,True,1.436,True,43.64,-1042.99
+2024-02-04 00:00:00,Lille vs Clermont,1.4,True,Napoli vs Verona,1.4,True,1.96,True,96.0,-946.99
+2024-02-10 00:00:00,Liverpool vs Burnley,1.17,True,Leeds vs Rotherham,1.17,True,1.369,True,36.89,-910.1
+2024-02-17 00:00:00,Man City vs Chelsea,1.33,False,RB Leipzig vs M'gladbach,1.36,True,1.809,False,-100.0,-1010.1
+2024-02-20 00:00:00,Man City vs Brentford,1.18,True,Ipswich vs Rotherham,1.22,True,1.44,True,43.96,-966.14
+2024-02-24 00:00:00,Stuttgart vs FC Koln,1.3,False,Arsenal vs Newcastle,1.36,True,1.768,False,-100.0,-1066.14
+2024-02-25 00:00:00,Real Madrid vs Sevilla,1.29,True,Juventus vs Frosinone,1.3,True,1.677,True,67.7,-998.44
+2024-03-03 00:00:00,Man City vs Man United,1.25,True,Rennes vs Lorient,1.4,False,1.75,False,-100.0,-1098.44
+2024-03-05 00:00:00,Coventry vs Rotherham,1.3,True,Leeds vs Stoke,1.33,True,1.729,True,72.9,-1025.54
+2024-03-09 00:00:00,RB Leipzig vs Darmstadt,1.14,True,Arsenal vs Brentford,1.22,True,1.391,True,39.08,-986.46
+2024-03-10 00:00:00,Real Madrid vs Celta,1.3,True,Leverkusen vs Wolfsburg,1.33,True,1.729,True,72.9,-913.56
+2024-03-17 00:00:00,Monaco vs Lorient,1.36,False,Roma vs Sassuolo,1.36,True,1.85,False,-100.0,-1013.56
+2024-03-30 00:00:00,Leverkusen vs Hoffenheim,1.2,True,Tottenham vs Luton,1.2,True,1.44,True,44.0,-969.56
+2024-03-31 00:00:00,Stuttgart vs Heidenheim,1.25,False,Liverpool vs Brighton,1.36,True,1.7,False,-100.0,-1069.56
+2024-04-01 00:00:00,Inter vs Empoli,1.22,True,Bologna vs Salernitana,1.3,True,1.586,True,58.6,-1010.96
+2024-04-03 00:00:00,Arsenal vs Luton,1.1,True,Man City vs Aston Villa,1.3,True,1.43,True,43.0,-967.96
+2024-04-06 00:00:00,Paris SG vs Clermont,1.18,False,Leicester vs Birmingham,1.33,True,1.569,False,-100.0,-1067.96
+2024-04-13 00:00:00,Man City vs Luton,1.1,True,Bayern Munich vs FC Koln,1.22,True,1.342,True,34.2,-1033.76
+2024-04-14 00:00:00,Inter vs Cagliari,1.18,False,Leverkusen vs Werder Bremen,1.2,True,1.416,False,-100.0,-1133.76
+2024-04-20 00:00:00,Lens vs Clermont,1.36,True,Girona vs Cadiz,1.4,True,1.904,True,90.4,-1043.36
+2024-04-27 00:00:00,Newcastle vs Sheffield United,1.22,True,Paris SG vs Le Havre,1.33,False,1.623,False,-100.0,-1143.36
+2024-05-04 00:00:00,Man City vs Wolves,1.08,True,Arsenal vs Bournemouth,1.22,True,1.318,True,31.76,-1111.6
+2024-05-11 00:00:00,RB Leipzig vs Werder Bremen,1.29,False,Tottenham vs Burnley,1.36,True,1.754,False,-100.0,-1211.6
+2024-05-12 00:00:00,Juventus vs Salernitana,1.14,False,Bayern Munich vs Wolfsburg,1.33,True,1.516,False,-100.0,-1311.6
+2024-05-18 00:00:00,Dortmund vs Darmstadt,1.17,True,Stuttgart vs M'gladbach,1.29,True,1.509,True,50.93,-1260.67
+2024-05-19 00:00:00,Man City vs West Ham,1.08,True,Liverpool vs Wolves,1.17,True,1.264,True,26.36,-1234.31
+2024-05-25 00:00:00,Milan vs Salernitana,1.18,False,Juventus vs Monza,1.33,True,1.569,False,-100.0,-1334.31
+2024-08-17 00:00:00,Arsenal vs Wolves,1.18,True,Newcastle vs Southampton,1.36,True,1.605,True,60.48,-1273.83
+2024-08-24 00:00:00,Man City vs Ipswich,1.08,True,Inter vs Lecce,1.2,True,1.296,True,29.6,-1244.23
+2024-08-25 00:00:00,Real Madrid vs Valladolid,1.18,True,Liverpool vs Brentford,1.27,True,1.499,True,49.86,-1194.37
+2024-08-31 00:00:00,Barcelona vs Valladolid,1.25,True,Arsenal vs Brighton,1.33,False,1.662,False,-100.0,-1294.37
+2024-09-01 00:00:00,Bayern Munich vs Freiburg,1.2,True,Real Madrid vs Betis,1.29,True,1.548,True,54.8,-1239.57
+2024-09-14 00:00:00,Man City vs Brentford,1.18,True,Liverpool vs Nott'm Forest,1.22,False,1.44,False,-100.0,-1339.57
+2024-09-21 00:00:00,Real Madrid vs Espanol,1.17,True,Liverpool vs Bournemouth,1.3,True,1.521,True,52.1,-1287.47
+2024-09-22 00:00:00,Leverkusen vs Wolfsburg,1.3,True,Monaco vs Le Havre,1.36,True,1.768,True,76.8,-1210.67
+2024-09-27 00:00:00,Dortmund vs Bochum,1.25,True,Milan vs Lecce,1.33,True,1.662,True,66.25,-1144.42
+2024-09-28 00:00:00,Arsenal vs Leicester,1.17,True,Monaco vs Montpellier,1.33,True,1.556,True,55.61,-1088.81
+2024-09-29 00:00:00,Napoli vs Monza,1.36,True,Roma vs Venezia,1.4,True,1.904,True,90.4,-998.41
+2024-10-05 00:00:00,Leverkusen vs Holstein Kiel,1.09,False,Arsenal vs Southampton,1.14,True,1.243,False,-100.0,-1098.41
+2024-10-06 00:00:00,Stuttgart vs Hoffenheim,1.3,False,Juventus vs Cagliari,1.38,False,1.794,False,-100.0,-1198.41
+2024-10-19 00:00:00,Paris SG vs Strasbourg,1.27,True,Bayern Munich vs Stuttgart,1.36,True,1.727,True,72.72,-1125.69
+2024-10-20 00:00:00,Barcelona vs Sevilla,1.3,True,Ath Madrid vs Leganes,1.33,True,1.729,True,72.9,-1052.79
+2024-10-26 00:00:00,Man City vs Southampton,1.11,True,Stuttgart vs Holstein Kiel,1.22,True,1.354,True,35.42,-1017.37
+2024-10-30 00:00:00,Atalanta vs Monza,1.3,True,Juventus vs Parma,1.4,False,1.82,False,-100.0,-1117.37
+2024-11-02 00:00:00,Leeds vs Plymouth,1.18,True,Bayern Munich vs Union Berlin,1.18,True,1.392,True,39.24,-1078.13
+2024-11-03 00:00:00,Barcelona vs Espanol,1.13,True,Inter vs Venezia,1.17,True,1.322,True,32.21,-1045.92
+2024-11-09 00:00:00,Real Madrid vs Osasuna,1.2,True,Leeds vs QPR,1.25,True,1.5,True,50.0,-995.92
+2024-11-10 00:00:00,Tottenham vs Ipswich,1.25,False,Lyon vs St Etienne,1.33,True,1.662,False,-100.0,-1095.92
+2024-11-22 00:00:00,Bayern Munich vs Augsburg,1.13,True,Paris SG vs Toulouse,1.36,True,1.537,True,53.68,-1042.24
+2024-11-23 00:00:00,Leverkusen vs Heidenheim,1.2,True,Stuttgart vs Bochum,1.29,True,1.548,True,54.8,-987.44
+2024-11-30 00:00:00,Barcelona vs Las Palmas,1.17,False,Paris SG vs Nantes,1.22,False,1.427,False,-100.0,-1087.44
+2024-12-07 00:00:00,Bayern Munich vs Heidenheim,1.1,True,Leverkusen vs St Pauli,1.25,True,1.375,True,37.5,-1049.94
+2024-12-08 00:00:00,Lens vs Montpellier,1.36,True,Ath Madrid vs Sevilla,1.38,True,1.877,True,87.68,-962.26
+2024-12-14 00:00:00,Arsenal vs Everton,1.22,False,Sheffield United vs Plymouth,1.25,True,1.525,False,-100.0,-1062.26
+2024-12-15 00:00:00,Barcelona vs Leganes,1.13,False,Chelsea vs Brentford,1.33,True,1.503,False,-100.0,-1162.26
+2024-12-20 00:00:00,Bayern Munich vs RB Leipzig,1.2,True,Girona vs Valladolid,1.38,True,1.656,True,65.6,-1096.66
+2024-12-21 00:00:00,Leeds vs Oxford,1.14,True,Leverkusen vs Freiburg,1.38,True,1.573,True,57.32,-1039.34
+2024-12-22 00:00:00,Atalanta vs Empoli,1.29,True,Real Madrid vs Sevilla,1.33,True,1.716,True,71.57,-967.77
+2024-12-26 00:00:00,Liverpool vs Leicester,1.08,True,Man City vs Everton,1.33,False,1.436,False,-100.0,-1067.77
+2025-01-04 00:00:00,Man City vs West Ham,1.3,True,Lyon vs Montpellier,1.33,True,1.729,True,72.9,-994.87
+2025-01-05 00:00:00,Liverpool vs Man United,1.29,False,Marseille vs Le Havre,1.3,True,1.677,False,-100.0,-1094.87
+2025-01-11 00:00:00,Milan vs Cagliari,1.33,False,Freiburg vs Holstein Kiel,1.4,True,1.862,False,-100.0,-1194.87
+2025-01-12 00:00:00,Paris SG vs St Etienne,1.09,True,Napoli vs Verona,1.25,True,1.362,True,36.25,-1158.62
+2025-01-15 00:00:00,Bayern Munich vs Hoffenheim,1.13,True,Newcastle vs Wolves,1.36,True,1.537,True,53.68,-1104.94
+2025-01-18 00:00:00,Bayern Munich vs Wolfsburg,1.17,True,Leverkusen vs M'gladbach,1.27,True,1.486,True,48.59,-1056.35
+2025-01-19 00:00:00,Real Madrid vs Las Palmas,1.14,True,Inter vs Empoli,1.25,True,1.425,True,42.5,-1013.85
+2025-01-25 00:00:00,Liverpool vs Ipswich,1.08,True,Sunderland vs Plymouth,1.25,False,1.35,False,-100.0,-1113.85
+2025-01-26 00:00:00,Barcelona vs Valencia,1.22,True,Milan vs Parma,1.3,True,1.586,True,58.6,-1055.25
+2025-02-01 00:00:00,Bayern Munich vs Holstein Kiel,1.05,True,Villarreal vs Valladolid,1.22,True,1.281,True,28.1,-1027.15
+2025-02-02 00:00:00,Barcelona vs Alaves,1.2,True,Leverkusen vs Hoffenheim,1.25,True,1.5,True,50.0,-977.15
+2025-02-07 00:00:00,Bayern Munich vs Werder Bremen,1.1,True,Paris SG vs Monaco,1.38,True,1.518,True,51.8,-925.35
+2025-02-15 00:00:00,Marseille vs St Etienne,1.25,True,Milan vs Verona,1.33,True,1.662,True,66.25,-859.1
+2025-02-16 00:00:00,Liverpool vs Wolves,1.15,True,Ein Frankfurt vs Holstein Kiel,1.33,True,1.529,True,52.95,-806.15
+2025-02-22 00:00:00,Inter vs Genoa,1.27,True,Arsenal vs West Ham,1.27,False,1.613,False,-100.0,-906.15
+2025-02-23 00:00:00,Ath Bilbao vs Valladolid,1.17,True,Real Madrid vs Girona,1.29,True,1.509,True,50.93,-855.22
+2025-03-01 00:00:00,Atalanta vs Venezia,1.2,False,Leeds vs West Brom,1.36,False,1.632,False,-100.0,-955.22
+2025-03-02 00:00:00,Barcelona vs Sociedad,1.25,True,Marseille vs Nantes,1.4,True,1.75,True,75.0,-880.22
+2025-03-08 00:00:00,Liverpool vs Southampton,1.1,True,Bayern Munich vs Bochum,1.11,False,1.221,False,-100.0,-980.22
+2025-03-09 00:00:00,Chelsea vs Leicester,1.18,True,Real Madrid vs Vallecano,1.29,True,1.522,True,52.22,-928.0
+2025-03-29 00:00:00,Bayern Munich vs St Pauli,1.14,True,Real Madrid vs Leganes,1.14,True,1.3,True,29.96,-898.04
+2025-03-30 00:00:00,Barcelona vs Girona,1.25,True,Inter vs Udinese,1.4,True,1.75,True,75.0,-823.04
+2025-04-02 00:00:00,Man City vs Leicester,1.2,True,Liverpool vs Everton,1.36,True,1.632,True,63.2,-759.84
+2025-04-05 00:00:00,Paris SG vs Angers,1.14,True,Real Madrid vs Valencia,1.3,False,1.482,False,-100.0,-859.84
+2025-04-12 00:00:00,Leeds vs Preston,1.22,True,Brighton vs Leicester,1.29,False,1.574,False,-100.0,-959.84
+2025-04-13 00:00:00,Chelsea vs Ipswich,1.27,False,Liverpool vs West Ham,1.3,True,1.651,False,-100.0,-1059.84
+2025-04-14 00:00:00,Ath Madrid vs Valladolid,1.14,True,Napoli vs Empoli,1.33,True,1.516,True,51.62,-1008.22
+2025-04-19 00:00:00,Paris SG vs Le Havre,1.13,True,Marseille vs Montpellier,1.22,True,1.379,True,37.86,-970.36
+2025-04-23 00:00:00,Ath Bilbao vs Las Palmas,1.36,True,Arsenal vs Crystal Palace,1.4,False,1.904,False,-100.0,-1070.36
+2025-04-26 00:00:00,Newcastle vs Ipswich,1.18,True,Bayern Munich vs Mainz,1.22,True,1.44,True,43.96,-1026.4
+2025-04-27 00:00:00,Juventus vs Monza,1.2,True,Atalanta vs Lecce,1.25,False,1.5,False,-100.0,-1126.4
+2025-05-02 00:00:00,Nice vs Reims,1.4,True,Man City vs Wolves,1.4,True,1.96,True,96.0,-1030.4
+2025-05-03 00:00:00,Inter vs Verona,1.3,True,Dortmund vs Wolfsburg,1.33,True,1.729,True,72.9,-957.5
+2025-05-04 00:00:00,Real Madrid vs Celta,1.33,True,Brest vs Montpellier,1.36,True,1.809,True,80.88,-876.62
+2025-05-10 00:00:00,Bayern Munich vs M'gladbach,1.17,True,Mallorca vs Valladolid,1.33,True,1.556,True,55.61,-821.01
+2025-05-11 00:00:00,Napoli vs Genoa,1.3,False,Nott'm Forest vs Leicester,1.33,False,1.729,False,-100.0,-921.01
+2025-05-14 00:00:00,Villarreal vs Leganes,1.33,True,Real Madrid vs Mallorca,1.38,True,1.835,True,83.54,-837.47
+2025-05-17 00:00:00,Dortmund vs Holstein Kiel,1.09,True,Paris SG vs Auxerre,1.2,True,1.308,True,30.8,-806.67
+2025-05-18 00:00:00,Juventus vs Udinese,1.38,True,Everton vs Southampton,1.4,True,1.932,True,93.2,-713.47
+2025-05-24 00:00:00,Milan vs Monza,1.22,True,Leganes vs Valladolid,1.3,True,1.586,True,58.6,-654.87
+2025-05-25 00:00:00,Bournemouth vs Leicester,1.33,True,Newcastle vs Everton,1.33,False,1.769,False,-100.0,-754.87
