@@ -7,6 +7,10 @@ on:
   # 也支持手动触发
   workflow_dispatch:
 
+# 允许 workflow 推送到仓库（commit 回测结果）
+permissions:
+  contents: write
+
 jobs:
   backtest:
     runs-on: ubuntu-latest
