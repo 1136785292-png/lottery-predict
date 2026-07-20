@@ -1,0 +1,45 @@
+name: 每日推荐
+
+on:
+  # 每天北京时间 09:00 跑（UTC 01:00）
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+jobs:
+  daily-recommend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      - name: 配置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 拉取今日比赛（占位 - 后续接中国体彩数据）
+        run: |
+          cd src
+          python daily.py || echo "[WARN] daily.py 还没接真实数据源，先用占位数据"
+
+      - name: 生成今日推荐页面
+        run: |
+          cd src
+          python generate_report.py || true
+
+      - name: 提交结果
+        run: |
+          git config user.name "lottery-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add docs/ data/daily/
+          git diff --staged --quiet || git commit -m "auto: 每日推荐更新"
+          git push

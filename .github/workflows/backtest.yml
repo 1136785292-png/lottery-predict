@@ -1,0 +1,67 @@
+name: 每周回测
+
+on:
+  # 每周日北京时间 10:00 跑（UTC 02:00）
+  schedule:
+    - cron: "0 2 * * 0"
+  # 也支持手动触发
+  workflow_dispatch:
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      - name: 配置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 采集历史数据
+        run: |
+          cd src
+          python collect.py
+
+      - name: 跑回测（3 策略对比）
+        run: |
+          cd src
+          python backtest.py
+
+      - name: 生成可视化报告
+        run: |
+          cd src
+          python generate_report.py
+
+      - name: 提交回测结果
+        run: |
+          git config user.name "lottery-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/backtest/ docs/data/
+          git diff --staged --quiet || git commit -m "auto: 每周回测结果更新"
+          git push
+
+  deploy-pages:
+    needs: backtest
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取最新结果
+        uses: actions/checkout@v4
+
+      - name: 部署到 GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: 发布
+        id: deployment
+        uses: actions/deploy-pages@v4

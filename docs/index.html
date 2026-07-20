@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>稳胆 2 串 1 · 回测看板</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&family=DM+Serif+Display&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --card: #ffffff;
+    --line: #e9e3d6;
+    --line-soft: #f0ebe0;
+    --ink: #14171e;
+    --ink-2: #3a4256;
+    --muted: #7c7a72;
+    --primary: #2f6f5e;
+    --primary-soft: rgba(47, 111, 94, 0.08);
+    --warn: #c97b3f;
+    --warn-soft: rgba(201, 123, 63, 0.1);
+    --danger: #b06367;
+    --danger-soft: rgba(176, 99, 103, 0.1);
+    --good: #4a8d6a;
+    --good-soft: rgba(74, 141, 106, 0.1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Outfit', 'Noto Sans SC', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    font-size: 15px;
+    min-height: 100dvh;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: -10%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(47, 111, 94, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    bottom: -10%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(201, 123, 63, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 48px 28px 80px; position: relative; z-index: 1; }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 32px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .top .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--good);
+    margin-right: 8px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  h1 {
+    font-family: 'DM Serif Display', 'Noto Serif SC', serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    color: var(--ink-2);
+    margin-bottom: 36px;
+    font-size: 16px;
+  }
+  section { margin-bottom: 40px; }
+  h2 {
+    font-family: 'DM Serif Display', 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2 .badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--primary);
+    background: var(--primary-soft);
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .stat {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+  .stat .label {
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+  }
+  .stat .value {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .stat .value.pos { color: var(--good); }
+  .stat .value.neg { color: var(--danger); }
+  .stat .value.warn { color: var(--warn); }
+  .stat .sub {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--line); }
+  th {
+    background: var(--bg);
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  td.num, th.num { text-align: right; font-family: 'JetBrains Mono', monospace; }
+  tr:last-child td { border-bottom: none; }
+  tr.highlight { background: var(--primary-soft); }
+  tr.highlight td { font-weight: 600; }
+  .pill { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 20px; font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+  .pill.good { background: var(--good-soft); color: var(--good); }
+  .pill.warn { background: var(--warn-soft); color: var(--warn); }
+  .pill.danger { background: var(--danger-soft); color: var(--danger); }
+  .pill.primary { background: var(--primary-soft); color: var(--primary); }
+  .chart-wrap { position: relative; height: 300px; margin: 8px 0; }
+  .quote {
+    border-left: 3px solid var(--primary);
+    background: var(--primary-soft);
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .quote.warn { border-color: var(--warn); background: var(--warn-soft); }
+  .quote strong { color: var(--ink); }
+  .placeholder {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+  }
+  .placeholder .icon { font-size: 36px; margin-bottom: 12px; opacity: 0.3; }
+  .footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+  }
+  .nav {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 32px;
+    font-size: 14px;
+  }
+  .nav a {
+    color: var(--ink-2);
+    text-decoration: none;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .nav a:hover { color: var(--primary); border-bottom-color: var(--primary); }
+  .nav a.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 600; }
+  @media (max-width: 720px) {
+    .wrap { padding: 28px 18px 60px; }
+    h1 { font-size: 30px; }
+    .summary-grid { grid-template-columns: repeat(2, 1fr); }
+    .chart-wrap { height: 240px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <span><span class="dot"></span>LIVE · 每周回测自动更新</span>
+    <span id="updatedAt">--</span>
+  </div>
+
+  <h1>稳胆 2 串 1<br>回测看板</h1>
+  <p class="subtitle">赔率 ≤ 1.4 · 2 串 1 长期胜率验证 · 3 策略对比</p>
+
+  <nav class="nav">
+    <a href="#summary" class="active">总览</a>
+    <a href="#chart">收益曲线</a>
+    <a href="#detail">明细对比</a>
+    <a href="#disclaimer">风险说明</a>
+  </nav>
+
+  <!-- 核心指标 -->
+  <section id="summary">
+    <h2>核心指标 <span class="badge">WEEKLY</span></h2>
+    <div id="summaryGrid" class="summary-grid">
+      <div class="placeholder"><div class="icon">📊</div>正在加载...</div>
+    </div>
+  </section>
+
+  <!-- 收益曲线 -->
+  <section id="chart">
+    <h2>收益曲线 <span class="badge">250 期回测</span></h2>
+    <div class="card">
+      <div class="chart-wrap">
+        <canvas id="roiChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- 明细对比 -->
+  <section id="detail">
+    <h2>策略对比明细</h2>
+    <div class="card">
+      <table id="detailTable">
+        <thead>
+          <tr>
+            <th>策略</th>
+            <th class="num">期数</th>
+            <th class="num">胜率</th>
+            <th class="num">净收益</th>
+            <th class="num">ROI</th>
+            <th class="num">最大回撤</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6" style="text-align:center; color:var(--muted);">加载中...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 风险说明 -->
+  <section id="disclaimer">
+    <h2>风险说明</h2>
+    <div class="card">
+      <div class="quote warn">
+        <strong>真实回测 vs 理论推算：</strong>本看板的数据来自 GitHub Actions 自动跑的真实历史回测（每周日北京时间 10:00 更新）。但赔率来自 Bet365 国际市场，与中国体彩官方赔率会略有差异（抽水略高）。<strong>实际胜率可能比这低 1-3%</strong>。
+      </div>
+      <ul style="padding-left:20px; color:var(--ink-2); font-size:14px;">
+        <li style="padding:6px 0;">体彩长期稳定盈利极难，本工具的价值是「透明决策」而非「保证赚钱」</li>
+        <li style="padding:6px 0;">即使模型胜率 56%，250 期下来 ROI 仍在 -5% 到 +3% 区间</li>
+        <li style="padding:6px 0;">资金管理（凯利公式）比模型本身更影响长期收益</li>
+        <li style="padding:6px 0;">心理纪律是最大变量——连续 5-7 期不中时，你能否坚持？</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="footer">
+    <p>稳胆 2 串 1 · 由 GitHub Actions 每周自动跑回测 · 数据源：football-data.co.uk 公开数据集</p>
+  </div>
+
+</div>
+
+<script>
+  // 加载回测数据
+  fetch("./data/backtest.json")
+    .then(r => r.json())
+    .then(data => {
+      renderSummary(data);
+      renderChart(data);
+      renderDetailTable(data);
+      document.getElementById("updatedAt").textContent = "更新于 " + new Date(data.generated_at).toLocaleString("zh-CN");
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById("summaryGrid").innerHTML = '<div class="placeholder"><div class="icon">⏳</div><p>暂无数据 - 等待 GitHub Actions 第一次跑回测</p><p style="font-size:13px; margin-top:8px;">（部署后约 5-10 分钟出结果）</p></div>';
+    });
+
+  function renderSummary(data) {
+    if (data.status !== "ok" || !data.comparison) {
+      document.getElementById("summaryGrid").innerHTML = '<div class="placeholder"><div class="icon">⏳</div>等待第一次回测...</div>';
+      return;
+    }
+    const comp = data.comparison;
+    const dt = comp.dual_track || {};
+    const rng = comp.random || {};
+    const periods = dt.total_periods || 0;
+    const winRate = dt.win_rate ? (dt.win_rate * 100).toFixed(1) + "%" : "--";
+    const roi = dt.roi_pct ? dt.roi_pct.toFixed(2) + "%" : "--";
+    const pnl = dt.total_pnl ? "¥" + dt.total_pnl.toFixed(0) : "--";
+
+    const html = `
+      <div class="stat">
+        <div class="label">回测期数</div>
+        <div class="value">${periods}</div>
+        <div class="sub">${dt.start_date || ""} ~ ${dt.end_date || ""}</div>
+      </div>
+      <div class="stat">
+        <div class="label">双轨策略胜率</div>
+        <div class="value ${dt.win_rate >= 0.55 ? 'pos' : dt.win_rate >= 0.50 ? 'warn' : 'neg'}">${winRate}</div>
+        <div class="sub">vs 随机 ${rng.win_rate ? (rng.win_rate * 100).toFixed(1) + "%" : "--"}</div>
+      </div>
+      <div class="stat">
+        <div class="label">双轨 ROI</div>
+        <div class="value ${dt.roi_pct > 0 ? 'pos' : dt.roi_pct > -3 ? 'warn' : 'neg'}">${roi}</div>
+        <div class="sub">每期 ¥${dt.bet_per_period || 100}</div>
+      </div>
+      <div class="stat">
+        <div class="label">净收益</div>
+        <div class="value ${dt.total_pnl > 0 ? 'pos' : 'neg'}">${pnl}</div>
+        <div class="sub">最大回撤 ¥${dt.max_drawdown ? dt.max_drawdown.toFixed(0) : "--"}</div>
+      </div>
+    `;
+    document.getElementById("summaryGrid").innerHTML = html;
+  }
+
+  function renderChart(data) {
+    if (data.status !== "ok" || !data.histories) return;
+
+    const ctx = document.getElementById("roiChart").getContext("2d");
+    const colors = {
+      random: "#b06367",
+      odds_only: "#c97b3f",
+      dual_track: "#2f6f5e"
+    };
+    const labels = ["随机选", "纯赔率筛选", "双轨模型"];
+
+    const datasets = [];
+    const histories = data.histories;
+    if (histories.dual_track) {
+      datasets.push({
+        label: "双轨模型",
+        data: histories.dual_track.bankrolls,
+        borderColor: colors.dual_track,
+        backgroundColor: "rgba(47, 111, 94, 0.08)",
+        borderWidth: 2.5,
+        pointRadius: 0,
+        tension: 0.2,
+        fill: true
+      });
+    }
+    if (histories.odds_only) {
+      datasets.push({
+        label: "纯赔率筛选",
+        data: histories.odds_only.bankrolls,
+        borderColor: colors.odds_only,
+        borderWidth: 2,
+        pointRadius: 0,
+        tension: 0.2
+      });
+    }
+    if (histories.random) {
+      datasets.push({
+        label: "随机选（对照组）",
+        data: histories.random.bankrolls,
+        borderColor: colors.random,
+        borderDash: [4, 4],
+        borderWidth: 2,
+        pointRadius: 0,
+        tension: 0.2
+      });
+    }
+
+    new Chart(ctx, {
+      type: "line",
+      data: { datasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: "bottom", labels: { font: { family: "'Outfit', 'Noto Sans SC'", size: 12 }, color: "#3a4256", usePointStyle: true, padding: 16 } },
+          tooltip: { backgroundColor: "#14171e", padding: 12, cornerRadius: 8, callbacks: { label: ctx => ctx.dataset.label + "：¥" + ctx.parsed.y.toFixed(0) } }
+        },
+        scales: {
+          y: { grid: { color: "rgba(0,0,0,0.04)" }, ticks: { color: "#7c7a72", font: { family: "'JetBrains Mono'", size: 11 }, callback: v => "¥" + v } },
+          x: { grid: { display: false }, ticks: { color: "#7c7a72", font: { family: "'JetBrains Mono'", size: 11 } } }
+        }
+      }
+    });
+  }
+
+  function renderDetailTable(data) {
+    if (data.status !== "ok" || !data.comparison) {
+      document.querySelector("#detailTable tbody").innerHTML = '<tr><td colspan="6" style="text-align:center; color:var(--muted);">等待数据...</td></tr>';
+      return;
+    }
+    const comp = data.comparison;
+    const labels = { random: "随机选（对照组）", odds_only: "纯赔率筛选", dual_track: "双轨模型" };
+    const rows = [];
+    for (const [key, label] of Object.entries(labels)) {
+      const s = comp[key];
+      if (!s) continue;
+      const isBest = key === "dual_track";
+      const winRateCls = s.win_rate >= 0.55 ? "good" : s.win_rate >= 0.50 ? "warn" : "danger";
+      const roiCls = s.roi_pct > 0 ? "good" : s.roi_pct > -3 ? "warn" : "danger";
+      rows.push(`
+        <tr ${isBest ? 'class="highlight"' : ''}>
+          <td>${label} ${isBest ? '<span class="pill primary">推荐</span>' : ''}</td>
+          <td class="num">${s.total_periods}</td>
+          <td class="num"><span class="pill ${winRateCls}">${(s.win_rate * 100).toFixed(1)}%</span></td>
+          <td class="num" style="color: ${s.total_pnl > 0 ? 'var(--good)' : 'var(--danger)'}">¥${s.total_pnl.toFixed(0)}</td>
+          <td class="num"><span class="pill ${roiCls}">${s.roi_pct > 0 ? '+' : ''}${s.roi_pct.toFixed(2)}%</span></td>
+          <td class="num">¥${s.max_drawdown.toFixed(0)}</td>
+        </tr>
+      `);
+    }
+    document.querySelector("#detailTable tbody").innerHTML = rows.join("");
+  }
+</script>
+</body>
+</html>
