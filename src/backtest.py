@@ -125,8 +125,8 @@ def run_backtest(history_df: pd.DataFrame, strategy: str = "dual_track",
 
     df = history_df.copy().sort_values("date").reset_index(drop=True)
 
-    # 按日期分组
-    daily_groups = df.groupby(df["date"].dt.date)
+    # 按日期分组（用 Grouper 保证 date 是 Timestamp，pandas 3.0 兼容）
+    daily_groups = df.groupby(pd.Grouper(key="date", freq="D"))
 
     results = []
     bankroll = 0.0
@@ -154,7 +154,9 @@ def run_backtest(history_df: pd.DataFrame, strategy: str = "dual_track",
             scores = []
             for _, row in candidates.iterrows():
                 # 用历史数据（截止到当前日期）评分
-                past_df = df[df["date"] < date]
+                # 把 date 强制转成 Timestamp 避免 pandas 3.0 的 InvalidComparison
+                date_ts = pd.Timestamp(date) if not isinstance(date, pd.Timestamp) else date
+                past_df = df[df["date"] < date_ts]
                 if past_df.empty:
                     continue
                 eval_ = dual_track_evaluate(
